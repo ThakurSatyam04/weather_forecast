@@ -13,10 +13,36 @@ body{
     min-height: 100vh;
 }
 
-.card{
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.container{
+    display: flex;
+    color: white;
+    gap: 5rem;
+}
+
+.heading{
+    max-width: fit-content;
+    text-align: center;
+}
+
+.heading h2{
+    margin: 10px;
+    background :linear-gradient(120deg, #ebd86c, #8a5489, #dd7171) ;
+    border-radius: 10px;
+    padding: 0.3rem;
+}
+
+.card1{
     width: 100%;
     min-width: 400px;
-    max-width: fit-content;
+    max-width: 400px;
     background: linear-gradient(135deg, #00feba, #5b548a);
     color: #fff;
     border-radius: 20px;
@@ -80,7 +106,7 @@ body{
 
 .convertButton{
     margin-top: 0.2rem;
-    margin-bottom: 0.6rem;
+    margin-bottom: 1rem;
     padding: 0.3rem;
     border-radius: 10px;
     cursor: pointer;
@@ -125,3 +151,26 @@ body{
     color: red;
     font-size: 1.3rem;
 }
+
+.card2{
+    width: 100%;
+    min-width: 400px;
+    max-width: 400px;
+    background: #00febac2;
+    color: #000;
+    border-radius: 20px;
+    padding: 20px 15px;
+    display: none;
+}
+
+.card2 p{
+    line-height: 1.5rem;
+    font-size: 1.1rem;
+}
+
+@media only screen and (max-width: 890px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+  }

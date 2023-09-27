@@ -3,41 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App - Code Clause</title>
+    <title>Weather App</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-        <div class="card">
-            <div class="search">
-                <input type="text" placeholder="Enter city name" spellcheck="false">
-                <button><img src="./images/search.png" alt="search icon"></button>
-            </div>
-            <div class="error">
-                <p>Invalid city name!</p>
-            </div>
-            <div class="weather">
-                <img src="./images//rain.png" class="weather-icon">
-                <h1 class="temp">22°c</h1>
-                <button class="convertButton">Convert to °F</button>
-                <h2 class="city">New York</h2>
-                <div class="details">
-                    <div class="col">
-                        <img src="./images//humidity.png">
-                        <div>
-                            <p class="humidity">50%</p>
-                            <p>Humidity</p>
+    <div class="main">
+        <div class="heading">
+            <h2>Current Weather Forecasting</h2>
+        </div>
+        <div  class="container">
+            <div class="card1">
+                <div class="search">
+                    <input type="text" placeholder="Enter city name" spellcheck="false">
+                    <button><img src="./images/search.png" alt="search icon"></button>
+                </div>
+                <div class="error">
+                    <p>Invalid city name!</p>
+                </div>
+                <div class="weather">
+                    <img src="./images//rain.png" class="weather-icon">
+                    <h1 class="temp" id="temp">22°c</h1>
+                    <button class="convertButton">Convert to °F</button>
+                    <h2 class="city">New York</h2>
+                    <div class="details">
+                        <div class="col">
+                            <img src="./images//humidity.png">
+                            <div>
+                                <p class="humidity">50%</p>
+                                <p>Humidity</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <img src="./images//wind.png">
-                        <div>
-                            <p class="wind">15 km/hr</p>
-                            <p>Wind Speed</p>
+                        <div class="col">
+                            <img src="./images//wind.png">
+                            <div>
+                                <p class="wind">15 km/hr</p>
+                                <p>Wind Speed</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>    
+            <div class="card2">
+                <h2>More details about current weather...</h2><br>
+                <p>Currently, the weather conditions are as follows: the temperature stands at a comfortable <span class="detail_temp">25</span>°C, with a humidity level of <span class="detail_humidity">80</span>%. The sky above is described as '<span class="detail_sky">'Cloudy'</span>' indicating <span class="detail_skyDes">'Cloudy'</span>. The wind is blowing gently at a speed of <span class="detail_wind">25</span> km/h. Additionally, the visibility is clear, providing an excellent view of the surroundings. These conditions are perfect for enjoying outdoor activities or planning your day ahead. Please note that weather conditions can change, so it's advisable to stay updated with the latest forecasts.</p>
             </div>
-        </div>    
+        </div>
+    </div>
         
 
     <script src="./script.js"></script>

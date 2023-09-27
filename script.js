@@ -1,11 +1,12 @@
-const apiKey = "cc83025ab0384f62d5c7ec896a58efd7"
+const apiKey = "cc83025ab0384f62d5c7ec896a58efd7" // To get data by city name
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q="
 
 const searchBox = document.querySelector(".search input");
 const searchBtn = document.querySelector(".search button");
 const weatherIcon = document.querySelector(".weather-icon");
 const convertBtn = document.querySelector(".convertButton")
-const tempElement = document.querySelector(".temp")
+const tempElement = document.querySelector("#temp")
+const detail_temp = document.querySelector(".detail_temp");
 let isCelsius = true;
 var currentTemp = "null";
 
@@ -14,19 +15,26 @@ var currentTemp = "null";
 
 async function checkWeather(city){
     const response = await fetch(apiUrl + city + `&appid=${apiKey}`)
-
     if(response.status == 404){
         document.querySelector(".error").style.display = "block"
         document.querySelector(".weather").style.display = "none"
     }
     else{
         const data = await response.json();
+        console.log(data)
         currentTemp = data.main.temp;
     
-        document.querySelector(".temp").innerHTML = data.main.temp.toFixed(2) + "°c"
+        // document.querySelector(".temp").innerHTML = data.main.temp.toFixed(2) + "°C"
+        tempElement.textContent = data.main.temp.toFixed(2) + "°C";
         document.querySelector(".city").innerHTML = data.name
         document.querySelector(".humidity").innerHTML = data.main.humidity + "%"
         document.querySelector(".wind").innerHTML = data.wind.speed + " km/hr"
+        detail_temp.innerHTML = data.main.temp;
+        document.querySelector(".detail_humidity").innerHTML = data.main.humidity
+        document.querySelector(".detail_sky").innerHTML = data.weather[0].main
+        document.querySelector(".detail_skyDes").innerHTML = data.weather[0].description
+        document.querySelector(".detail_wind").innerHTML = data.wind.speed
+
     
         if(data.weather[0].main == "Clouds"){
             weatherIcon.src = "./images/clouds.png"
@@ -52,18 +60,21 @@ async function checkWeather(city){
     
         document.querySelector(".weather").style.display = "block"
         document.querySelector(".error").style.display = "none"
+        document.querySelector(".card2").style.display = "block"
     }
 }
 
 searchBtn.addEventListener("click", ()=>{
     checkWeather(searchBox.value);
-    convertBtn.textContent = "Convert to °F"
+    convertBtn.textContent = "Convert to °F";
+    isCelsius=true;
 })
 
 searchBox.addEventListener("keydown", function(event) {
     if(event.key === "Enter"){
         checkWeather(searchBox.value);
         convertBtn.textContent = "Convert to °F";
+        isCelsius=true;
     }
 })
 
