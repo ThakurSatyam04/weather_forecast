@@ -11,7 +11,7 @@ This web development project is a simple Weather Forecasting Web App built using
 **HTML:** Provides the structure and layout of the web page.    
 **CSS:** Styles the web page for an appealing and user-friendly interface.    
 **JavaScript:** Fetches weather data from an API and updates the UI dynamically.     
-**Weather API:** Utilizes a weather API (e.g., OpenWeatherMap) to fetch real-time weather data.    
+**Weather API:** Utilizes a weather API (OpenWeatherMap) to fetch real-time weather data.    
 
 ## How to Use:    
 Open this link- https://weather-forecast-coral-delta.vercel.app/ in a web browser.     
