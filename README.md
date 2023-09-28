@@ -2,7 +2,7 @@
 This web development project is a simple Weather Forecasting Web App built using HTML, CSS, and JavaScript. It allows users to check the current weather conditions for a specific location.
 
 ##Features
-Current Weather: Display the current temperature, humidity, and weather description for the selected location.
+Current Weather: Display the current temperature, humidity, and weather description for the selected location.    
 Location Selection: Users can enter a city name or select their location to get weather information.
 Responsive Design: The app is designed to work seamlessly on desktop and mobile devices.
 User-Friendly: The interface is intuitive and easy to use, making it accessible to a wide range of users.
