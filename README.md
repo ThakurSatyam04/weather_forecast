@@ -14,9 +14,9 @@ This web development project is a simple Weather Forecasting Web App built using
 **Weather API:** Utilizes a weather API (e.g., OpenWeatherMap) to fetch real-time weather data.    
 
 ## How to Use:    
-Open this link https://weather-forecast-coral-delta.vercel.app/ in a web browser.     
+Open this link- https://weather-forecast-coral-delta.vercel.app/ in a web browser.     
 Enter the name of the city for which you want to check the weather.    
-Click Enter or search option to search.    
+Click **Enter** or **search icon** to search.    
 The current weather conditions for the selected location will be displayed on the screen.    
 
 
